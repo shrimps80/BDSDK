@@ -12,12 +12,7 @@ class Autoloader{
           $name = strstr($class, '\\', true);
         }
         
-        $filename = TOP_AUTOLOADER_PATH . $name.".php";
-        if(is_file($filename)) {
-            include $filename;
-            return;
-        }
-        $filename = TOP_AUTOLOADER_PATH . "/lib/" . $name.".php";
+        $filename = TOP_AUTOLOADER_PATH . "/" . $name.".php";
         if(is_file($filename)) {
             include $filename;
             return;

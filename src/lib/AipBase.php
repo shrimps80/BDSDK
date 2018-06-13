@@ -34,19 +34,19 @@ class AipBase {
      * appId
      * @var string
      */
-    protected $appId = '';
+    public $appId = '';
 
     /**
      * apiKey
      * @var string
      */
-    protected $apiKey = '';
+    public $apiKey = '';
     
     /**
      * secretKey
      * @var string
      */
-    protected $secretKey = '';
+    public $secretKey = '';
 
     /**
      * 权限
@@ -59,7 +59,7 @@ class AipBase {
      * @param string $apiKey
      * @param string $secretKey
      */
-    public function __construct($appId, $apiKey, $secretKey){
+    public function __construct($appId = "", $apiKey = "", $secretKey = ""){
         $this->appId = trim($appId);
         $this->apiKey = trim($apiKey);
         $this->secretKey = trim($secretKey);
